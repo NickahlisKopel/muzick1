@@ -37,7 +37,7 @@ public class ListenerController {
         return new ResponseEntity<>(listeners, HttpStatus.OK);
     }
 
-    @GetMapping("/id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> getOneListener(@PathVariable Long id){
         Optional<Listener> listener = listenerRepository.findById(id);
 
